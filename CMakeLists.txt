@@ -1,5 +1,8 @@
 cmake_minimum_required(VERSION 3.0.0)
-project(Input-Action)
+project(Input-Action
+        VERSION 1.0.0
+        LANGUAGES CXX 
+)
 
 #Export commands from compile_commands.json
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
