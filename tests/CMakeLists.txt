@@ -12,9 +12,12 @@ set_target_properties(gtest_main PROPERTIES FOLDER third_party)
 set_target_properties(gmock PROPERTIES FOLDER third_party)
 set_target_properties(gmock_main PROPERTIES FOLDER third_party)
 
-macro(package_add_test TESTNAME)
+macro(package_add_test TESTNAME TESTED_LIB)
     add_executable(${TESTNAME} ${ARGN})
-    target_link_libraries(${TESTNAME} gtest gmock gtest_main)
+    target_include_directories(${TESTNAME} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+    target_link_libraries(${TESTNAME} PUBLIC
+        gtest gmock gtest_main ${TESTED_LIB} pthread
+    )
     add_test(NAME ${TESTNAME} COMMAND ${TESTNAME})
     set_target_properties(${TESTNAME} PROPERTIES FOLDER tests)
 endmacro()
