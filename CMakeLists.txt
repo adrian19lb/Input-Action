@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.0)
-project(Input-Action
+project(inputaction
         VERSION 1.0.0
         LANGUAGES CXX 
 )
@@ -13,3 +13,5 @@ if (PACKAGE_TESTS)
     enable_testing()
     add_subdirectory(tests)
 endif()
+
+add_subdirectory(src)
