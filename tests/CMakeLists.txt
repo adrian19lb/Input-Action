@@ -28,5 +28,6 @@ package_add_test(InputActionTests ${PROJECT_NAME}
     ComperatorTest.cpp
     HasherTest.cpp
     ActionTest.cpp
+    StateTest.cpp
 )
 

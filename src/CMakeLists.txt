@@ -15,6 +15,8 @@ target_sources(${PROJECT_NAME}
         ${INCROOT}/detail/Dereferencer.hpp
         ${INCROOT}/detail/Comperator.hpp
         ${INCROOT}/detail/Hasher.hpp
+        ${INCROOT}/events/button/State.hpp
+        ${INCROOT}/events/button/Fixture.hpp
     PUBLIC
         ${INCROOT}/events/EventComponent.hpp
         ${SRCROOT}/EventComponent.cpp
