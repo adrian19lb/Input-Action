@@ -3,6 +3,7 @@
 
 #include <events/Identifiers.hpp>
 #include <cstddef>
+#include <memory>
 
 namespace inact {
 
@@ -20,6 +21,8 @@ namespace inact {
     private:
         Event::Type id;
     };
+
+    using EventComponentShrPtr = std::shared_ptr<EventComponent>;
 
 }
 
