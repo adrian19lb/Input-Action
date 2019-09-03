@@ -7,6 +7,8 @@ project(inputaction
 #Export commands from compile_commands.json
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
+add_subdirectory(src)
+
 #Add unit tests to build
 option(PACKAGE_TESTS "Build the tests" ON)
 if (PACKAGE_TESTS)
