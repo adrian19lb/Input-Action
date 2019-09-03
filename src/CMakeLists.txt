@@ -9,12 +9,16 @@ target_sources(${PROJECT_NAME}
         ${INCROOT}/detail/hash_combine.hpp
         ${INCROOT}/events/button/Dispatcher.hpp
         ${SRCROOT}/Dispatcher.cpp
+        ${INCROOT}/events/button/KeyboardDispatcher.hpp
+        ${SRCROOT}/KeyboardDispatcher.cpp
     PUBLIC
         ${INCROOT}/events/EventComponent.hpp
         ${SRCROOT}/EventComponent.cpp
         ${INCROOT}/events/ButtonComponent.hpp
         ${INCROOT}/events/button/ButtonComponent.inc
         ${INCROOT}/events/ButtonAction.hpp
+        ${INCROOT}/events/KeyboardKeyComponent.hpp
+        ${INCROOT}/events/button/KeyboardKeyComponent.inc
 )
     
 

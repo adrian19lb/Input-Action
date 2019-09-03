@@ -1,5 +1,6 @@
 #include <gtest/gtest.h>
 #include <events/EventComponent.hpp>
+#include <events/KeyboardKeyComponent.hpp>
 
 namespace inact::testing {
     
@@ -26,7 +27,10 @@ namespace inact::testing {
         EventComponentsTest,
         EventComponentParameterizedTestFixture,
         ::testing::Values(
-            std::make_tuple( std::make_shared<EventComponent>(Event::Type::KeyPressed), std::make_shared<EventComponent>(Event::Type::KeyReleased))
-        ));
+            std::make_tuple( std::make_shared<EventComponent>(Event::Type::KeyPressed), std::make_shared<EventComponent>(Event::Type::KeyReleased)),
+            std::make_tuple( std::make_shared<KeyboardKeyComponent<char> >(ButtonAction::PressOnce, 'A'),
+                             std::make_shared<KeyboardKeyComponent<char>>(ButtonAction::PressOnce, 'B')))
+
+        );
 
 }
