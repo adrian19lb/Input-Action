@@ -14,6 +14,7 @@ target_sources(${PROJECT_NAME}
         ${INCROOT}/detail/is_smart_pointer.hpp
         ${INCROOT}/detail/Dereferencer.hpp
         ${INCROOT}/detail/Comperator.hpp
+        ${INCROOT}/detail/Hasher.hpp
     PUBLIC
         ${INCROOT}/events/EventComponent.hpp
         ${SRCROOT}/EventComponent.cpp
