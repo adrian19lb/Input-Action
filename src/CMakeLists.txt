@@ -49,7 +49,7 @@ find_package(aggup REQUIRED /usr/local/share/aggup)
 find_package(SFML 2.5.1 COMPONENTS window REQUIRED)
 
 target_link_libraries(${PROJECT_NAME}
-    PRIVATE
+    PUBLIC
         aggup
     PUBLIC
         sfml-window
