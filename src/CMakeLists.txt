@@ -7,9 +7,14 @@ add_library(${PROJECT_NAME} SHARED
 target_sources(${PROJECT_NAME}
     PRIVATE
         ${INCROOT}/detail/hash_combine.hpp
+        ${INCROOT}/events/button/Dispatcher.hpp
+        ${SRCROOT}/Dispatcher.cpp
     PUBLIC
         ${INCROOT}/events/EventComponent.hpp
         ${SRCROOT}/EventComponent.cpp
+        ${INCROOT}/events/ButtonComponent.hpp
+        ${INCROOT}/events/button/ButtonComponent.inc
+        ${INCROOT}/events/ButtonAction.hpp
 )
     
 
