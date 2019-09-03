@@ -21,3 +21,9 @@ macro(package_add_test TESTNAME TESTED_LIB)
     add_test(NAME ${TESTNAME} COMMAND ${TESTNAME})
     set_target_properties(${TESTNAME} PROPERTIES FOLDER tests)
 endmacro()
+
+#Unit tests
+package_add_test(InputActionTests ${PROJECT_NAME}
+    EventComponentTest.cpp
+)
+

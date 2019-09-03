@@ -2,12 +2,14 @@ set(INCROOT ${PROJECT_SOURCE_DIR}/include/InputAction)
 set(SRCROOT ${PROJECT_SOURCE_DIR}/src)
 
 add_library(${PROJECT_NAME} SHARED
-    ${INCROOT}
 )
 
 target_sources(${PROJECT_NAME}
     PRIVATE
+        ${INCROOT}/detail/hash_combine.hpp
     PUBLIC
+        ${INCROOT}/events/EventComponent.hpp
+        ${SRCROOT}/EventComponent.cpp
 )
     
 
