@@ -11,6 +11,9 @@ target_sources(${PROJECT_NAME}
         ${SRCROOT}/Dispatcher.cpp
         ${INCROOT}/events/button/KeyboardDispatcher.hpp
         ${SRCROOT}/KeyboardDispatcher.cpp
+        ${INCROOT}/detail/is_smart_pointer.hpp
+        ${INCROOT}/detail/Dereferencer.hpp
+        ${INCROOT}/detail/Comperator.hpp
     PUBLIC
         ${INCROOT}/events/EventComponent.hpp
         ${SRCROOT}/EventComponent.cpp

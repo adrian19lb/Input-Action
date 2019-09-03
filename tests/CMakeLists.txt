@@ -25,5 +25,6 @@ endmacro()
 #Unit tests
 package_add_test(InputActionTests ${PROJECT_NAME}
     EventComponentTest.cpp
+    ComperatorTest.cpp
 )
 
