@@ -55,7 +55,7 @@ set_target_properties(${PROJECT_NAME}
     SOVERSION 1
 )
 
-target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_17)
+target_compile_features(${PROJECT_NAME} PUBLIC cxx_std_17)
 
 find_package(aggup REQUIRED /usr/local/share/aggup)
 find_package(SFML 2.5.1 COMPONENTS window REQUIRED)
