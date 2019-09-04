@@ -22,6 +22,7 @@ target_sources(${PROJECT_NAME}
         ${INCROOT}/events/button/ReleaseState.hpp
         ${INCROOT}/events/button/PressSecondState.hpp
         ${INCROOT}/detail/RangeSearcher.hpp
+        ${INCROOT}/events/button/FixtureReceiver.hpp
     PUBLIC
         ${INCROOT}/events/EventComponent.hpp
         ${SRCROOT}/EventComponent.cpp
