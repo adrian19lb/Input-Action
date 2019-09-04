@@ -18,6 +18,7 @@ target_sources(${PROJECT_NAME}
         ${INCROOT}/events/button/State.hpp
         ${INCROOT}/events/button/Fixture.hpp
         ${INCROOT}/events/button/PressOnceState.hpp
+        ${INCROOT}/events/button/HoldState.hpp
     PUBLIC
         ${INCROOT}/events/EventComponent.hpp
         ${SRCROOT}/EventComponent.cpp
