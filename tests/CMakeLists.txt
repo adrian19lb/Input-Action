@@ -33,5 +33,6 @@ package_add_test(InputActionTests ${PROJECT_NAME}
     button/HoldStateTest.cpp
     button/ReleaseStateTest.cpp
     button/PressSecondStateTest.cpp
+    RangeSearcherTest.cpp
 )
 
