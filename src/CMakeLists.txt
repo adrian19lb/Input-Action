@@ -17,6 +17,7 @@ target_sources(${PROJECT_NAME}
         ${INCROOT}/detail/Hasher.hpp
         ${INCROOT}/events/button/State.hpp
         ${INCROOT}/events/button/Fixture.hpp
+        ${INCROOT}/events/button/PressOnceState.hpp
     PUBLIC
         ${INCROOT}/events/EventComponent.hpp
         ${SRCROOT}/EventComponent.cpp

@@ -29,5 +29,6 @@ package_add_test(InputActionTests ${PROJECT_NAME}
     HasherTest.cpp
     ActionTest.cpp
     StateTest.cpp
+    button/PressOnceStateTest.cpp
 )
 
