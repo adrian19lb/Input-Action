@@ -18,7 +18,7 @@ namespace inact::button::testing {
     };
     
     
-    TEST_F(PressOnceStateTest, testCreatePressOnceIfActive) {
+    TEST_F(PressOnceStateTest, testCreatePressOnceKeyEventIfActive) {
         PressOnceState<char, KeyboardDispatcher> state;
         previous.isPressed = false;
 
@@ -26,7 +26,7 @@ namespace inact::button::testing {
         EXPECT_EQ( *eventPressKey, ButtonComponent<char>(std::make_unique<KeyboardDispatcher>(), ButtonAction::PressOnce, 'A'));
     }
     
-    TEST_F(PressOnceStateTest, testCreatePressOnceIfNoActive) {
+    TEST_F(PressOnceStateTest, testCreateDefaultEventIfNoActive) {
         PressOnceState<char, KeyboardDispatcher> state;
         auto eventDefault = state.create(current, previous);
         
