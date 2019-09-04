@@ -24,6 +24,7 @@ target_sources(${PROJECT_NAME}
         ${INCROOT}/detail/RangeSearcher.hpp
         ${INCROOT}/events/button/FixtureReceiver.hpp
         ${INCROOT}/events/button/FixtureRangeReceiver.hpp
+        ${INCROOT}/detail/Buffer.hpp
     PUBLIC
         ${INCROOT}/events/EventComponent.hpp
         ${SRCROOT}/EventComponent.cpp
