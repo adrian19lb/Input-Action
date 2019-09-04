@@ -23,6 +23,7 @@ target_sources(${PROJECT_NAME}
         ${INCROOT}/events/button/PressSecondState.hpp
         ${INCROOT}/detail/RangeSearcher.hpp
         ${INCROOT}/events/button/FixtureReceiver.hpp
+        ${INCROOT}/events/button/FixtureRangeReceiver.hpp
     PUBLIC
         ${INCROOT}/events/EventComponent.hpp
         ${SRCROOT}/EventComponent.cpp
