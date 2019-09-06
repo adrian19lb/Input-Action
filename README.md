@@ -1,7 +1,7 @@
 # Input-Action
 High level input action library based on SFML/Window module. Actually keyboard and mouse button events are supported.
 # Learn
-Let's start with simple example. First of we need include headers:
+Let's start with simple example. First of all we need include headers:
 ```
   #include <inact/Action.hpp>
   #include <inact/events/KeyboardKeyEventComponent.hpp>
