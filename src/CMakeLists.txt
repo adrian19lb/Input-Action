@@ -37,6 +37,7 @@ target_sources(${PROJECT_NAME}
         ${INCROOT}/events/MouseButtonComponent.hpp
         ${INCROOT}/events/button/KeyboardKeyComponent.inc
         ${INCROOT}/events/ButtonListener.hpp
+        ${INCROOT}/events/ButtonListenerFactory.hpp
         ${INCROOT}/Action.hpp
         ${SRCROOT}/Action.cpp
 )
