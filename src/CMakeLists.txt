@@ -1,52 +1,15 @@
+include(GNUInstallDirs)
+
 set(INCROOT ${PROJECT_SOURCE_DIR}/include/InputAction)
 set(SRCROOT ${PROJECT_SOURCE_DIR}/src)
 
 add_library(${PROJECT_NAME} SHARED
+    ${SRCROOT}/KeyboardDispatcher.cpp
+    ${SRCROOT}/MouseDispatcher.cpp
+    ${SRCROOT}/Dispatcher.cpp
+    ${SRCROOT}/EventComponent.cpp
+    ${SRCROOT}/Action.cpp
 )
-
-target_sources(${PROJECT_NAME}
-    PRIVATE
-        ${INCROOT}/detail/hash_combine.hpp
-        ${INCROOT}/events/button/Dispatcher.hpp
-        ${SRCROOT}/Dispatcher.cpp
-        ${INCROOT}/events/button/KeyboardDispatcher.hpp
-        ${SRCROOT}/KeyboardDispatcher.cpp
-        ${INCROOT}/events/button/MouseDispatcher.hpp
-        ${SRCROOT}/MouseDispatcher.cpp
-        ${INCROOT}/detail/is_smart_pointer.hpp
-        ${INCROOT}/detail/Dereferencer.hpp
-        ${INCROOT}/detail/Comperator.hpp
-        ${INCROOT}/detail/Hasher.hpp
-        ${INCROOT}/events/button/State.hpp
-        ${INCROOT}/events/button/Fixture.hpp
-        ${INCROOT}/events/button/PressOnceState.hpp
-        ${INCROOT}/events/button/HoldState.hpp
-        ${INCROOT}/events/button/ReleaseState.hpp
-        ${INCROOT}/events/button/PressSecondState.hpp
-        ${INCROOT}/detail/RangeSearcher.hpp
-        ${INCROOT}/events/button/FixtureReceiver.hpp
-        ${INCROOT}/events/button/FixtureRangeReceiver.hpp
-        ${INCROOT}/detail/Buffer.hpp
-    PUBLIC
-        ${INCROOT}/events/EventComponent.hpp
-        ${SRCROOT}/EventComponent.cpp
-        ${INCROOT}/events/ButtonComponent.hpp
-        ${INCROOT}/events/button/ButtonComponent.inc
-        ${INCROOT}/events/ButtonAction.hpp
-        ${INCROOT}/events/KeyboardKeyComponent.hpp
-        ${INCROOT}/events/MouseButtonComponent.hpp
-        ${INCROOT}/events/button/KeyboardKeyComponent.inc
-        ${INCROOT}/events/ButtonListener.hpp
-        ${INCROOT}/events/ButtonListenerFactory.hpp
-        ${INCROOT}/events/KeyboardKeyListenerFactory.hpp
-        ${INCROOT}/events/MouseButtonListenerFactory.hpp
-        ${INCROOT}/AggregatorActivatorImpBuilder.hpp
-        ${INCROOT}/Action.hpp
-        ${SRCROOT}/Action.cpp
-        ${INCROOT}/ButtonActionActivator.hpp
-        ${INCROOT}/ActionActivator.hpp
-)
-    
 
 target_include_directories(${PROJECT_NAME}
     PUBLIC
@@ -76,3 +39,16 @@ target_link_libraries(${PROJECT_NAME}
     PUBLIC
         sfml-window
 )
+
+install(TARGETS ${PROJECT_NAME} EXPORT "${PROJECT_NAME}Config"
+    ARCHIVE  DESTINATION ${CMAKE_INSTALL_LIBDIR}
+    LIBRARY  DESTINATION ${CMAKE_INSTALL_LIBDIR}
+    RUNTIME  DESTINATION ${CMAKE_INSTALL_BINDIR}
+)
+
+install(DIRECTORY ${INCROOT} DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
+
+install(EXPORT "${PROJECT_NAME}Config" DESTINATION share/${PROJECT_NAME}/cmake)
+
+export(TARGETS ${PROJECT_NAME} FILE "${PROJECT_NAME}Config.cmake")
+
