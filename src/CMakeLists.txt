@@ -40,6 +40,7 @@ target_sources(${PROJECT_NAME}
         ${INCROOT}/events/ButtonListenerFactory.hpp
         ${INCROOT}/events/KeyboardKeyListenerFactory.hpp
         ${INCROOT}/events/MouseButtonListenerFactory.hpp
+        ${INCROOT}/AggregatorActivatorImpBuilder.hpp
         ${INCROOT}/Action.hpp
         ${SRCROOT}/Action.cpp
 )
