@@ -38,6 +38,7 @@ target_sources(${PROJECT_NAME}
         ${INCROOT}/events/button/KeyboardKeyComponent.inc
         ${INCROOT}/events/ButtonListener.hpp
         ${INCROOT}/events/ButtonListenerFactory.hpp
+        ${INCROOT}/events/KeyboardKeyListenerFactory.hpp
         ${INCROOT}/Action.hpp
         ${SRCROOT}/Action.cpp
 )
