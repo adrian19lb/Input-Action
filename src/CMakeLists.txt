@@ -43,6 +43,7 @@ target_sources(${PROJECT_NAME}
         ${INCROOT}/AggregatorActivatorImpBuilder.hpp
         ${INCROOT}/Action.hpp
         ${SRCROOT}/Action.cpp
+        ${INCROOT}/ButtonActionActivator.hpp
 )
     
 
