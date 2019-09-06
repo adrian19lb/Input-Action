@@ -1,13 +1,13 @@
-#ifndef ACTIONACTIVATOR_H
-#define ACTIONACTIVATOR_H
+#ifndef BUTTONACTIONACTIVATOR_H
+#define BUTTONACTIONACTIVATOR_H
 
-#include <Action.hpp>
+#include <ActionActivator.hpp>
 #include <AggregatorActivatorImpBuilder.hpp>
 
 namespace inact {
     
     template<typename Identifiers>
-    class ButtonActionActivator {
+    class ButtonActionActivator : public ActionActivator<Identifiers> {
         template<typename Id, typename T>
         using AggregatorActivatorUPtr = std::unique_ptr< aggup::AggregatorActivator<Id, T> >;
     public:
@@ -26,16 +26,16 @@ namespace inact {
             this->aggregatorActivator = std::move(aggregatorActivator); 
         }
     public:
-        void add(Identifiers id, Action const& action) {
+        void add(Identifiers id, Action const& action) override {
             auto const* aggregator = &action.get();
             aggregatorActivator->add(id, aggregator); 
         }
 
-        void update() {
+        void update() override {
             aggregatorActivator->update();
         }
 
-        bool operator[](Identifiers id) {
+        bool operator[](Identifiers id) override {
             return aggregatorActivator->operator[](id);
         } 
 

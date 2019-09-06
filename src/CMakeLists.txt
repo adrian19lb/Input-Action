@@ -44,6 +44,7 @@ target_sources(${PROJECT_NAME}
         ${INCROOT}/Action.hpp
         ${SRCROOT}/Action.cpp
         ${INCROOT}/ButtonActionActivator.hpp
+        ${INCROOT}/ActionActivator.hpp
 )
     
 
