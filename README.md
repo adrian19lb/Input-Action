@@ -11,8 +11,8 @@ Let's start with simple example. First of all we need include headers:
 Now, let's create our 'superJump' action:
 ```
   inact::Action superJump;
-  action.add<inact::KeyboardKeyEventComponent, sf::Keyboard::Key>(inact::ButtonAction::PressOnce, sf::Keyboard::Key::A);
-  action.add<inact::MouseButtonEventComponent, sf::Mouse::Button>(inact::ButtonAction::Hold, sf::Mouse::Button::Left);
+  superJump.add<inact::KeyboardKeyEventComponent, sf::Keyboard::Key>(inact::ButtonAction::PressOnce, sf::Keyboard::Key::A);
+  superJump.add<inact::MouseButtonEventComponent, sf::Mouse::Button>(inact::ButtonAction::Hold, sf::Mouse::Button::Left);
 ```
 Next step is define ActionActivator instance and add 'superJump' action to activator. We use std::string as action identifier:
 ```
