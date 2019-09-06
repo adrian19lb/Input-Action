@@ -15,7 +15,11 @@ namespace inact {
     std::unique_ptr< aggup::Aggregator<EventComponentShrPtr> > Action::createAggregator() {
         return std::make_unique<CustomUnorderedAggregator>();
     }
-
+    
+    aggup::Aggregator<EventComponentShrPtr> const& Action::get() const {
+        return *aggregator; 
+    }
+    
     bool Action::contain(EventComponentShrPtr const& event) const {
         return aggregator->contain(event); 
     }

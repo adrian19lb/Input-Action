@@ -28,6 +28,7 @@ namespace inact {
         }
 
     public:
+        aggup::Aggregator<EventComponentShrPtr> const& get() const;
         size_t size() const;
         bool contain(EventComponentShrPtr const& event) const;
         bool contain(Action const& action) const;
